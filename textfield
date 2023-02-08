@@ -1,0 +1,17 @@
+TextField(
+  decoration: InputDecoration(
+    border: OutlineInputBorder(),
+    hintText: 'Enter a search term',
+  ),
+),
+
+-------------------------
+
+
+
+TextFormField(
+  decoration: const InputDecoration(
+    border: UnderlineInputBorder(),
+    labelText: 'Enter your username',
+  ),
+),
