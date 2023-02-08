@@ -1,0 +1,120 @@
+Column(
+{Key key,
+MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start,
+MainAxisSize mainAxisSize: MainAxisSize.max,
+CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center,
+TextDirection textDirection,
+VerticalDirection verticalDirection: VerticalDirection.down,
+TextBaseline textBaseline,
+List<Widget> children: const <Widget>[]}
+)
+
+
+
+Row(
+{Key key,
+MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start,
+MainAxisSize mainAxisSize: MainAxisSize.max,
+CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center,
+TextDirection textDirection,
+VerticalDirection verticalDirection: VerticalDirection.down,
+TextBaseline textBaseline: TextBaseline.alphabetic,
+List<Widget> children: const <Widget>[]}
+)
+
+
+
+
+
+
+Properties of Row and Column Widgets:
+children: This property takes in List<Widget>, that is a list of widgets to display inside the Row or the Column widget.
+clipBehaviour: This property holds Clip class as the object to decide whether the content on the Row or Column should be clipped or not.
+crossAxisAlignment: The crossAxisAlignment takes in CrossAxisAlignment enum as the object to how the children’s widgets should be places in crossAxisAlignment. For Row it is vertical and for Column it is horizontal.
+direction: This property holds as the Axis enum object to decide the direction used in the main axis. For Row and Column, it is fixed.
+mainAxisAlignment: This property takes in MainAxisAlignment enum as the object to decide how the children widgets should be place in mainAxisAlignment. For Row it is horizontal and for Column it is vertical.
+mainAxisSize: This property decides the size of main-axis by taking in MainAxisSize enum as the object.
+runtimeType: This property tells the run-time type of the Row or Column widget.
+textBaseline: This property is responsible for the alignment of the text in the Row or Column widget with respect to a baseline.
+textDirection: This property controls the text direction of the Row or Column widget, which can either be from left-to-right (by default) or right-to-left.
+verticalDirection: This property takes in VerticalDirection enum as the object to determine the order in which the children should be layered.
+Row:
+It creates a horizontal array of children.
+
+Alignment Properties: We can align content as per our choice by using mainAxisAlignment and crossAxisAlignment.  Row’s mainAxis is horizontal and cross Axis to Row’s main Axis is vertical. We can align children horizontally using MainAxisAlignment and vertically using CrossAxisAlignment in that row.
+
+
+
+
+
+
+
+ Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+         Text("data"),
+         Text("data"),
+         Text("data")
+        ],
+      )
+      
+      
+     -------------------------
+     
+    Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text("datadatadatadata"),
+          Text("datadatadatadata"),
+          Text("datadatadatadata")
+        ],
+      )
+-----------------------
+
+Row(
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+    Expanded(
+      child: Image.asset('images/pic1.jpg'),
+    ),
+    Expanded(
+      child: Image.asset('images/pic2.jpg'),
+    ),
+    Expanded(
+      child: Image.asset('images/pic3.jpg'),
+    ),
+  ],
+);----------------------------
+
+
+Row(
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+    Expanded(
+      child: Image.asset('images/pic1.jpg'),
+    ),
+    Expanded(
+      flex: 2,
+      child: Image.asset('images/pic2.jpg'),
+    ),
+    Expanded(
+      child: Image.asset('images/pic3.jpg'),
+    ),
+  ],
+);
+
+----------------------------------
+
+Row(
+  mainAxisSize: MainAxisSize.min,
+  children: [
+    Icon(Icons.star, color: Colors.green[500]),
+    Icon(Icons.star, color: Colors.green[500]),
+    Icon(Icons.star, color: Colors.green[500]),
+    const Icon(Icons.star, color: Colors.black),
+    const Icon(Icons.star, color: Colors.black),
+  ],
+)
+------------------------------------------
+
+
