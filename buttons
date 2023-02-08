@@ -1,0 +1,253 @@
+three type of buttons:
+text
+elevated 
+outline
+
+TextButton(
+  style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+  ),
+  onPressed: () { },
+  child: Text('TextButton'),
+)
+
+
+
+TextButton(
+  style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+    overlayColor: MaterialStateProperty.resolveWith<Color?>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.hovered))
+          return Colors.blue.withOpacity(0.04);
+        if (states.contains(MaterialState.focused) ||
+            states.contains(MaterialState.pressed))
+          return Colors.blue.withOpacity(0.12);
+        return null; // Defer to the widget's default.
+      },
+    ),
+  ),
+  onPressed: () { },
+  child: Text('TextButton')
+)
+
+
+
+
+TextButton(
+  style: ButtonStyle(
+    overlayColor: MaterialStateProperty.resolveWith<Color?>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.focused))
+          return Colors.red;
+        return null; // Defer to the widget's default.
+      }
+    ),
+  ),
+  onPressed: () { },
+  child: Text('TextButton'),
+)
+
+
+
+TextButton(
+  style: TextButton.styleFrom(
+    primary: Colors.blue,
+  ),
+  onPressed: () { },
+  child: Text('TextButton'),
+)
+
+
+
+TextButton(
+  style: TextButton.styleFrom(
+    primary: Colors.blue,
+    onSurface: Colors.red,
+  ),
+  onPressed: null,
+  child: Text('TextButton'),
+)
+
+
+
+
+
+
+final ButtonStyle flatButtonStyle = TextButton.styleFrom(
+  primary: Colors.black87,
+  minimumSize: Size(88, 36),
+  padding: EdgeInsets.symmetric(horizontal: 16.0),
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(Radius.circular(2.0)),
+  ),
+);
+
+TextButton(
+  style: flatButtonStyle,
+  onPressed: () { },
+  child: Text('Looks like a FlatButton'),
+)
+
+
+
+
+
+
+final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
+  onPrimary: Colors.black87,
+  primary: Colors.grey[300],
+  minimumSize: Size(88, 36),
+  padding: EdgeInsets.symmetric(horizontal: 16),
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(Radius.circular(2)),
+  ),
+);
+ElevatedButton(
+  style: raisedButtonStyle,
+  onPressed: () { },
+  child: Text('Looks like a RaisedButton'),
+)
+
+
+
+
+
+final ButtonStyle outlineButtonStyle = OutlinedButton.styleFrom(
+  primary: Colors.black87,
+  minimumSize: Size(88, 36),
+  padding: EdgeInsets.symmetric(horizontal: 16),
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(Radius.circular(2)),
+  ),
+).copyWith(
+  side: MaterialStateProperty.resolveWith<BorderSide>(
+    (Set<MaterialState> states) {
+      if (states.contains(MaterialState.pressed))
+        return BorderSide(
+          color: Theme.of(context).colorScheme.primary,
+          width: 1,
+        );
+      return null; // Defer to the widget's default.
+    },
+  ),
+);
+
+OutlinedButton(
+  style: outlineButtonStyle,
+  onPressed: () { },
+  child: Text('Looks like an OutlineButton'),
+)
+
+
+
+
+
+
+FlatButton(
+  textColor: Colors.red, // foreground
+  onPressed: () { },
+  child: Text('FlatButton with custom foreground/background'),
+)
+
+TextButton(
+  style: TextButton.styleFrom(
+    primary: Colors.red, // foreground
+  ),
+  onPressed: () { },
+  child: Text('TextButton with custom foreground'),
+)
+
+
+
+RaisedButton(
+  color: Colors.red, // background
+  textColor: Colors.white, // foreground
+  onPressed: () { },
+  child: Text('RaisedButton with custom foreground/background'),
+)
+
+ElevatedButton(
+  style: ElevatedButton.styleFrom(
+    primary: Colors.red, // background
+    onPrimary: Colors.white, // foreground
+  ),
+  onPressed: () { },
+  child: Text('ElevatedButton with custom foreground/background'),
+)
+
+
+
+
+
+FlatButton(
+  focusColor: Colors.red,
+  hoverColor: Colors.green,
+  splashColor: Colors.blue,
+  onPressed: () { },
+  child: Text('FlatButton with custom overlay colors'),
+)
+
+TextButton(
+  style: ButtonStyle(
+    overlayColor: MaterialStateProperty.resolveWith<Color?>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.focused))
+          return Colors.red;
+        if (states.contains(MaterialState.hovered))
+            return Colors.green;
+        if (states.contains(MaterialState.pressed))
+            return Colors.blue;
+        return null; // Defer to the widget's default.
+    }),
+  ),
+  onPressed: () { },
+  child: Text('TextButton with custom overlay colors'),
+)
+
+
+
+
+
+RaisedButton(
+  disabledColor: Colors.red.withOpacity(0.12),
+  disabledTextColor: Colors.red.withOpacity(0.38),
+  onPressed: null,
+  child: Text('RaisedButton with custom disabled colors'),
+),
+
+ElevatedButton(
+  style: ElevatedButton.styleFrom(onSurface: Colors.red),
+  onPressed: null,
+  child: Text('ElevatedButton with custom disabled colors'),
+)
+
+
+
+
+
+RaisedButton(
+  disabledColor: Colors.red,
+  disabledTextColor: Colors.blue,
+  onPressed: null,
+  child: Text('RaisedButton with custom disabled colors'),
+)
+
+ElevatedButton(
+  style: ButtonStyle(
+    backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled))
+          return Colors.red;
+        return null; // Defer to the widget's default.
+    }),
+    foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+      (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled))
+          return Colors.blue;
+        return null; // Defer to the widget's default.
+    }),
+  ),
+  onPressed: null,
+  child: Text('ElevatedButton with custom disabled colors'),
+)
