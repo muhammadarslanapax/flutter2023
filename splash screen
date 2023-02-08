@@ -1,0 +1,66 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+
+import 'main.dart';
+class Splash extends StatefulWidget {
+  const Splash({Key? key}) : super(key: key);
+
+  @override
+  State<Splash> createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+    super.initState();
+
+    Timer(Duration(seconds: 3),  (){
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+              builder: (context)=> Dashboard()));
+
+
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+
+      body:  Container(
+        color: Colors.red,
+
+        child: Center(child: Text("Splash Screen",style: TextStyle(
+          fontSize: 34,
+          fontWeight: FontWeight.w600,
+          color: Colors.white
+        ),),),
+      ),
+    );
+  }
+}
+
+import 'package:flutter/material.dart';
+import 'package:untitled/splash.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        primarySwatch: Colors.blue,
+      ),
+      home:  Splash(),
+    );
+  }
+}
