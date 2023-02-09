@@ -43,3 +43,52 @@
           ),
         ),
         
+--------------
+      body: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              Container(
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                height: 120,
+                width: 1200,
+                color: Colors.amber,
+              ),
+
+
+              Container(
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                height: 120,
+                width: 1200,
+                color: Colors.amber,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                height: 120,
+                color: Colors.amber,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                height: 120,
+                color: Colors.amber,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                height: 120,
+                color: Colors.amber,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                height: 120,
+                color: Colors.amber,
+              )
+            ],
+          ),
+        ),
+        
