@@ -1,0 +1,11 @@
+ Fluttertoast.showToast(
+                    msg: "$name1 $password1",
+                    toastLength: Toast.LENGTH_SHORT,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.black,
+                    textColor: Colors.white,
+                    fontSize: 16.0,
+                  );
+
+
+  fluttertoast: ^8.1.3
