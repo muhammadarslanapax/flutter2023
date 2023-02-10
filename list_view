@@ -1,0 +1,42 @@
+  // body:ListView(
+      //   // scrollDirection:Axis.horizontal,
+      //   scrollDirection:Axis.vertical,
+      //   // reverse:true,
+      //   children:[
+      //
+      //     Text("hi")
+      //     Text("hi")
+      //     Text("hi")
+      //     Text("hi")
+      //     Text("hi")
+      //     Text("hi")
+      //   ]
+      // )
+    // var names = ['alie','raza']
+    // body:ListView.builder(itemBuilder:(context, index)
+    // {
+    //   Text(names[index]);
+    // },
+    // itemCount:names.length,
+    // itmeExtend:100,
+    // scrollDirection:Axis.horizontal,
+    //
+    // )
+    //
+    //
+    // );
+
+
+
+    //     var name = ['ali','raza']
+    //     body:ListView.separated(itemBuilder:(context,index){
+    //
+    //       return Text(name[index]),
+    // },
+    // itemCOunt :name.length,
+    // scrollDirection:Axis.vertival,
+    // separatorBuilder:(context,index){
+    //       return :Divider(height:45,thickness:4,);
+    //
+    // }
+    // );
