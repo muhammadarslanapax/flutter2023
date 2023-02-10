@@ -1,0 +1,20 @@
+  color: Colors.red,
+           // borderRadius: BorderRadius.circular(34)
+            // borderRadius: BorderRadius.only(topLeft: Radius.circular(12)),
+            //borderRadius: BorderRadius.all(Radius.circular(12)),
+
+            border: Border.all(
+              width: 3,
+              color: Colors.black26
+            ),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 34,
+                color: Colors.black,
+                spreadRadius: 4
+
+              ),
+            ],shape: BoxShape.circle
+
+
+          ),
