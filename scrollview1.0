@@ -1,0 +1,86 @@
+   body: SingleChildScrollView(
+
+        child: Column(
+         crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+           Container(
+             width: 300,
+               height: 455
+             ,
+             color: Colors.blue,
+           ),
+            Container(
+              width: 300,
+              height: 455
+              ,
+              color: Colors.black,
+            ),
+            Container(
+              width: 300,
+              height: 455
+              ,
+              color: Colors.red,
+            ),
+            Container(
+              width: 300,
+              height: 455
+              ,
+              color: Colors.purple,
+            ),
+            Container(
+              width: 300,
+              height: 455
+              ,
+              color: Colors.pink,
+            ),
+
+
+          ],
+        ),
+      ),
+      
+      ---------------
+      
+      
+         body: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+
+        child: Row(
+
+          children: [
+           Container(
+             width: 300,
+               height: 455
+             ,
+             color: Colors.blue,
+           ),
+            Container(
+              width: 300,
+              height: 455
+              ,
+              color: Colors.black,
+            ),
+            Container(
+              width: 300,
+              height: 455
+              ,
+              color: Colors.red,
+            ),
+            Container(
+              width: 300,
+              height: 455
+              ,
+              color: Colors.purple,
+            ),
+            Container(
+              width: 300,
+              height: 455
+              ,
+              color: Colors.pink,
+            ),
+
+
+          ],
+        ),
+      ),
+    );
