@@ -1,0 +1,12 @@
+ intl: ^0.18.0
+ import 'package:intl/intl.dart';
+   var hours = DateTime.now().hour;
+    var dt = DateTime.now();
+    var mints= DateTime.now().minute;
+    var second = DateTime.now().second;
+
+    var day = DateTime.now().day;
+    var month = DateTime.now().month;
+    var yera = DateTime.now().year;
+    
+      child: Text(" ${DateFormat('Hms').format(dt)}",style: TextStyle(fontSize: 35),),),
