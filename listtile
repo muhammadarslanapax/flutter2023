@@ -1,0 +1,18 @@
+   return  Scaffold(
+     body: ListView.separated(itemBuilder: (context, index) {
+
+       return ListTile(
+         leading: Text("${index+1}"),
+         title: Text("title"),
+         subtitle: Text("subtitle"),
+            trailing: Text("theis is trainlein"),
+
+
+       );
+
+     }, separatorBuilder: (context, index) {
+
+       return Divider(height: 12,thickness: 2,);
+
+     }, itemCount: 10),
+    );
