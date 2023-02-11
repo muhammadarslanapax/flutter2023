@@ -29,3 +29,20 @@
 
 
           }
+          
+          
+          --------------------
+            DateTime? date = await showDatePicker(
+                context: context,
+                initialDate:DateTime.now(),
+                firstDate:DateTime(1900),
+                lastDate: DateTime(2100));            // TimeOfDay? pickedtime = await showTimePicker(context: context, initialTime: TimeOfDay.now(),
+            // initialEntryMode: TimePickerEntryMode.dial);
+            
+            
+            if(DateTime!=null){
+              setState(() {
+                print(date?.year);
+                
+              });
+            }
