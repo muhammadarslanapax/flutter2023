@@ -1,0 +1,25 @@
+    body: Row(
+      
+        children: [
+          Expanded(
+            child: Container(
+              width: 35,
+                height: 445,
+              color: Colors.pink,
+            ),
+          ),
+          Expanded(
+            child: Container(
+              width: 35,
+              height: 445,
+              color: Colors.red,
+            ),
+          ),
+          Container(
+            width: 35,
+            height: 445,
+            color: Colors.blue,
+          ),
+        ],
+
+      ),
