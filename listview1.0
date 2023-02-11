@@ -1,0 +1,35 @@
+     body:ListView(
+        children: [
+          Padding(padding: EdgeInsets.all(10),
+          child: Text("List item",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 30,),),),
+          Padding(padding: EdgeInsets.all(10),
+            child: Text("List item",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 30,),),),
+          Padding(padding: EdgeInsets.all(10),
+            child: Text("List item",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 30,),),),
+          Padding(padding: EdgeInsets.all(10),
+            child: Text("List item",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 30,),),),
+          Padding(padding: EdgeInsets.all(10),
+            child: Text("List item",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 30,),),),
+        ],
+      ) ,
+      
+      --------------------
+      
+           body: ListView.builder(itemBuilder: (context, index) {
+        return Padding(padding: EdgeInsets.all(20),
+        child: Text(list[index],style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700),),);
+      },
+      itemCount: list.length,
+      itemExtent: 100 ,),
+      
+      
+      -----------------
+      
+           body: ListView.separated(itemBuilder: (context, index) {
+        return Padding(padding: EdgeInsets.all(20),
+        child: Text(list[index],style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700),),);
+      },
+      itemCount: list.length,
+      separatorBuilder: (context, index) {
+        return Divider(height: 23,thickness: 2,);
+      }, ),
