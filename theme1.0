@@ -1,0 +1,28 @@
+return MaterialApp(
+      title: 'Flutter ffff',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      
+      
+      ----------------
+      
+      appBar: AppBar(
+      // title: Text("Main Page"),
+      // backgroundColor: ,
+    ),
+    
+    
+    theme: ThemeData(
+        textTheme: TextTheme(
+          subtitle1: TextStyle(fontSize: 345);
+
+        ),
+        
+        
+        ---------
+        
+          title: Text("Main Page",style: Theme.of(context).textTheme.bodyLarge,),
+          
+          
+                 title: Text("Main Page",style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.red),),
