@@ -10,3 +10,22 @@
     var yera = DateTime.now().year;
     
       child: Text(" ${DateFormat('Hms').format(dt)}",style: TextStyle(fontSize: 35),),),
+      
+      
+      
+      
+      ElevatedButton(onPressed: () async {
+            // setState(() {
+            //
+            // });
+            DateTime? date = await showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(1900), lastDate: DateTime(2022));
+            // TimeOfDay? pickedtime = await showTimePicker(context: context, initialTime: TimeOfDay.now(),
+            // initialEntryMode: TimePickerEntryMode.dial);
+            if(DateTime !=null){
+            print(date.)
+}
+
+
+
+
+          }
