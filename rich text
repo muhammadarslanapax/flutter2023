@@ -1,0 +1,12 @@
+Scaffold(
+  body:RichText(text: TextSpan(
+    children: <TextSpan>[
+      TextSpan(text: "Hello",style: TextStyle(fontSize: 23,color: Colors.blue)),
+      TextSpan(text: "baby",style: TextStyle(fontSize: 23,color: Colors.red))
+    ]
+  ),)
+
+
+
+
+    );
