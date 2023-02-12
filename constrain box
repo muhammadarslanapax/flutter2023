@@ -1,0 +1,11 @@
+ return  Scaffold(
+
+      body: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxWidth: 200
+        ),
+        child: Text("f sdf f sdf sf f dsf dsf df d ds f ds"),
+      ),
+
+
+    );
