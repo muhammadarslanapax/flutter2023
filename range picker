@@ -1,0 +1,24 @@
+    body: RangeSlider(
+        values: rv,
+        labels: rl,
+        divisions: 10,
+        max: 100,
+        min: 0,
+        activeColor: Colors.red,
+        inactiveColor: Colors.blue.shade700,
+
+
+
+        onChanged: (newvalue){
+          rv = newvalue;
+
+          setState(() {
+
+          });
+          
+          
+              RangeLabels rl = RangeLabels(rv.start.toString(), rv.end.toString());
+
+
+
+  RangeValues rv = RangeValues(0, 100);
