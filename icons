@@ -1,0 +1,7 @@
+  body:Center(child: Icon(Icons.ac_unit,size: 100,color: Colors.blue,))
+
+
+
+
+
+body:FaIcon(FontAwesomeIcons.amazon,size: 100,color: Colors.blue,) ,
