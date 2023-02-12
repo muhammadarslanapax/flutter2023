@@ -1,0 +1,25 @@
+return  Scaffold(
+
+      body:Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.blue,
+        child: Stack(
+          children: [
+            Positioned(child: Container(
+              width: 50,
+              height: 50,
+              color: Colors.red,
+
+            ),top: 100,
+              left: 100,
+              
+            )
+
+          ],
+        ),
+      ) ,
+
+
+    );
+    
