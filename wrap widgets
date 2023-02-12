@@ -1,0 +1,25 @@
+for a full screen widget only
+for raw and column
+specing
+direction axix.horizontal
+run space 
+
+dimension
+
+size box
+
+child 
+width 
+hight
+sizebox.expand 
+.shrink
+   min
+   max
+   min
+   max
+ .size
+ 
+ 
+ 
+ 
+ 
