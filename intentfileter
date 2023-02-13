@@ -1,0 +1,69 @@
+  share_plus: ^6.3.1
+
+import 'package:share_plus/share_plus.dart';
+  const url = "www.homerecipes.online";
+           
+                //share text and url
+            await Share.share("Hi every one\n\n$url");
+
+
+------------------------------------------------------
+
+  share_plus: ^6.3.1
+  http: ^0.13.5
+  path_provider: ^2.0.12
+
+
+import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
+import 'dart:io';
+import 'dart:ui' as ui;
+
+ var image_url = Uri.parse("https://www.shutterstock.com/image-photo/randan-waterfalls-mountains-sweden-260nw-2081729188.jpg");
+            var res = await http.get(image_url);
+            var bytes = res.bodyBytes;
+
+            var temp = await getTemporaryDirectory();
+            var path = '${temp.path}/image.jpg';
+            File(path).writeAsBytesSync(bytes);
+           // await Share.shareXFiles([path],text:"image" );
+            await Share.shareFiles([path],text: "hi");
+
+
+-------------------------
+
+
+  var image = await ImagePicker().pickImage(source: ImageSource.gallery);
+            if(image==null) return;
+await Share.shareFiles([image.path],text: "Hello");
+
+
+import 'package:file_picker/file_picker.dart';
+import 'package:image_picker/image_picker.dart';
+
+  file_picker: ^5.2.5
+  image_picker: ^0.8.6+1
+  
+  --------------------------------
+  
+  
+  
+            final result = await FilePicker.platform.pickFiles();
+            final files = result?.files.map((files) => files.path).toList();
+            if(files==null) return;
+
+            await Share.shareFiles((files as List<String>),text: "Hello");
+
+
+---------------------------------
+
+
+            final result = await FilePicker.platform.pickFiles(type: FileType.any);
+            final files = result?.files.map((files) => files.path).toList();
+            if(files==null) return;
+
+            await Share.shareFiles((files as List<String>),text: "Hello");
+-------------------------
+  
