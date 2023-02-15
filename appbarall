@@ -1,0 +1,72 @@
+AppBar(
+  title: Text("Hello Appbar"),
+)
+
+automaticallyImplyLeading: false
+
+
+
+AppBar(
+  title: Text("Hello Appbar"),
+  leading: Icon(
+    Icons.menu,
+  ),
+);
+
+
+
+AppBar(
+  title: Text("Hello Appbar"),
+  leading: GestureDetector(
+    onTap: () { /* Write listener code here */ },
+    child: Icon(
+      Icons.menu,  // add custom icons also
+    ),
+  ),
+)
+
+
+
+
+AppBar(
+  title: Text("Hello Appbar"),
+  leading: GestureDetector(
+      onTap: () { /* Write listener code here */ },
+      child: Icon(
+        Icons.menu,  // add custom icons also
+      ),
+  ),
+  actions: <Widget>[
+    Padding(
+      padding: EdgeInsets.only(right: 20.0),
+      child: GestureDetector(
+        onTap: () {},
+        child: Icon(
+          Icons.search,
+          size: 26.0,
+        ),
+      )
+    ),
+    Padding(
+      padding: EdgeInsets.only(right: 20.0),
+      child: GestureDetector(
+        onTap: () {},
+        child: Icon(
+            Icons.more_vert
+        ),
+      )
+    ),
+  ],
+),
+
+
+
+AppBar(
+  actionsIconTheme: IconThemeData(
+    size: 30.0,
+    color: Colors.black,
+    opacity: 10.0
+  ),
+),
+
+
